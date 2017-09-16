@@ -2,6 +2,14 @@
 ```javascript
 gotoFrame(this.mc, 120);
 ```
+
+### If using within setInterval or tick handler
+```javascript
+createjs.Ticker.addEventListener("tick", stage);
+function update(){
+   gotoFrame(this.mc, 120, false);
+}
+```
 <br />
 
 
@@ -10,4 +18,4 @@ gotoFrame(this.mc, 120);
 |-------------|:-------------:|-------------|
 | mc | Object | - |
 | end_frame | Number | - |
-| tween | Number | `true` by default, but if set `false`, each call of function would move timeline by one frame |
+| tween | Number | If set `false`, each call of function would move timeline by one frame at a time |
