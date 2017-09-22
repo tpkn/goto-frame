@@ -2,7 +2,7 @@
  * gotoFrame (v1.0.1.20170910), http://tpkn.me/
  */
 function gotoFrame(mc, end_frame, tween){
-   if(!lib || !lib.properties || !lib.properties.fps){
+   if(typeof lib === 'undefined' || !lib.properties || !lib.properties.fps){
       return console.error('No CreateJs!');
    }
 
