@@ -5,10 +5,12 @@ gotoFrame(this.mc, 120);
 
 ### If using within setInterval or tick handler
 ```javascript
-createjs.Ticker.addEventListener("tick", stage);
+var root = this;
+
 function update(){
-   gotoFrame(this.mc, 120, false);
+   gotoFrame(root.mc, 120, false);
 }
+createjs.Ticker.addEventListener("tick", stage);
 ```
 <br />
 
